@@ -1,0 +1,34 @@
+#ifndef MFRCPROXY_H
+#define MFRCPROXY_H
+
+#include "MFRC522.h"
+#include "amfrc522.h"
+#include <QObject>
+#include <QThread>
+#include <QString>
+
+class mfrcProxy : public QObject
+{
+    Q_OBJECT
+public:
+    explicit mfrcProxy(QObject *parent = nullptr);
+    ~mfrcProxy();
+
+/*
+    static bool gpioMount(int gpio);
+    static bool gpioUnmount(int gpio);
+    static bool gpioHandle(bool isOut);
+    static bool gpioWrite(int gpio, bool status);
+*/
+signals:
+    void disableDriver();
+    void enableDriver();
+    void sendID(const QString &id);
+    void clearPreID();
+
+private:
+    QThread mfrcWorkThread;
+    AMfrc522 *mfrcWorker;
+};
+
+#endif // MFRCPROXY_H

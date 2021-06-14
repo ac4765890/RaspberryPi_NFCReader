@@ -1,0 +1,6 @@
+#include "nfcwd.h"
+
+NFCWatchDog::NFCWatchDog(QObject *parent) : QObject(parent)
+{
+
+}

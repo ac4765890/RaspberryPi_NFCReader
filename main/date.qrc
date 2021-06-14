@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/http">
+        <file alias="500">rec/500.jpg</file>
+        <file alias="201">rec/201.jpg</file>
+        <file alias="logo">rec/logo.jpg</file>
+        <file alias="404">rec/404.jpg</file>
+    </qresource>
+</RCC>

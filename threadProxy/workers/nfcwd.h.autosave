@@ -1,0 +1,18 @@
+#ifndef NFCWD_H
+#define NFCWD_H
+
+#include <QObject>
+
+class NFCWatchDog : public QObject
+{
+    Q_OBJECT
+public:
+    explicit NFCWatchDog(QObject *parent = nullptr);
+     ~QCustomTimer();
+
+signals:
+
+public slots:
+};
+
+#endif // NFCWD_H
